@@ -151,11 +151,12 @@ play.onclick = () => {
     play.style.display = "none";
     game.style.display = "flex";
     deal.style.display = "block";
-    document.documentElement.style.overflow = "unset"; // html
-document.body.style.overflow = "unset"; // body
+    
 };
 
 deal.onclick = () => {
+    document.documentElement.style.overflow = "unset"; // html
+document.body.style.overflow = "unset"; // body
         hideDealerCard = true; // ✅ ensure hidden on deal
 
     if (totalMoney === 0) return alert("You lost all your money!");
