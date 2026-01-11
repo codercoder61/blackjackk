@@ -10,6 +10,9 @@ let hideDealerCard = true;
 const hit = document.getElementById("hit");
 const stand = document.getElementById("stand");
 
+document.documentElement.style.overflow = "hidden"; // html
+document.body.style.overflow = "hidden"; // body
+
 const computer = document.getElementById("computer_cards");
 const user = document.getElementById("user_cards");
 
@@ -43,7 +46,7 @@ let computer_cards = [];
 
 // ================= MONEY =================
 let totalMoney = 1000;
-let currentBet = 0;
+let currentBet = 0; 
 const chipCounts = {};
 
 moneySpan.textContent = totalMoney;
@@ -148,6 +151,8 @@ play.onclick = () => {
     play.style.display = "none";
     game.style.display = "flex";
     deal.style.display = "block";
+    document.documentElement.style.overflow = "unset"; // html
+document.body.style.overflow = "unset"; // body
 };
 
 deal.onclick = () => {
