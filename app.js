@@ -95,7 +95,7 @@ function resetRound() {
 
     overlay.style.display = "none";
     playing.style.display = "none";
-    game.style.display = "block";
+    game.style.display = "flex";
     deal.style.display = "block";
     user_cards = [];
     computer_cards = [];
@@ -146,7 +146,7 @@ function decideWinner() {
 play.onclick = () => {
     start.style.display = "none";
     play.style.display = "none";
-    game.style.display = "block";
+    game.style.display = "flex";
     deal.style.display = "block";
 };
 
