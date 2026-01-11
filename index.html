@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <div class="overlay"></div>
+    <div id="main-wrapper">
+        <div>
+            <button id="deal">Deal</button>
+        </div>
+        <div id="playing">
+            <div id="computer_cards"></div>
+            <span style="color:white; font-size: 1.9em;">Dealer score : </span><span id="c_score"></span>
+            <div style="display: flex;justify-content: center;">
+                <button id="hit" style="margin-right: 15px;">Hit</button>
+                <button id="stand">Stand</button>
+            </div>
+            <div id="user_cards"></div>
+            <span style="color:white; font-size: 1.9em;">Your score : </span><span id="u_score"></span>
+        </div>
+        <div id="start">
+            <div class="main">
+                <img src="carte1.jpg"/>
+                <img src="100.jpg"/>
+            </div>
+            <div>
+                <h1>Black</h1>
+                <h1>Jack</h1>
+            </div>
+            <div class="main">
+                <img src="5.jpg"/>
+                <img src="carte2.jpg"/>
+            </div>
+        </div>
+        <button id="play">Play</button>
+        <div id="game">
+            <h1>Choose your bet</h1>
+            <div id="chips" style="display:flex; gap:10px; flex-wrap: wrap;">
+        <div class="chip-container">
+            <img src="1.jpg" data-value="1"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="5.jpg" data-value="5"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="10.jpg" data-value="10"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="20.jpg" data-value="20"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="50.jpg" data-value="50"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="100.jpg" data-value="100"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="500.jpg" data-value="500"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="1000.jpg" data-value="1000"/>
+            <span class="chip-count">0</span>
+        </div>
+        <div class="chip-container">
+            <img src="5000.jpg" data-value="5000"/>
+            <span class="chip-count">0</span>
+        </div>
+    </div>
+    
+            <h2>You have $<span id="money">1000</span></h2>
+            <h2>Current bet $<span id="money2">0</span></h2>
+            <div>
+                <button style="font-size: 16px;" onclick="location.reload()">Restart Game</button>
+                <button id="resetBtn">Reset Bet</button>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
