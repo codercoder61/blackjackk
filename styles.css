@@ -70,7 +70,6 @@ button:hover{
 #game{
     display: none;
     position: absolute;
-    bottom: 100px;
     flex-direction: column;
     align-items: center;
 }
