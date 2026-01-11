@@ -150,3 +150,25 @@ button:hover{
 .another{
     font-size: 0.9em;
 }
+
+@media screen and (max-width:400px){
+    #playing{
+        overflow-x: scroll;
+        width: 100%;
+    }
+    #user_cards,#computer_cards{ 
+        display: flex;
+        overflow-x: scroll;
+        max-width: fit-content; 
+    }
+    .overlay >p{
+        text-align: center;
+    }
+    .overlay{
+            
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+}
