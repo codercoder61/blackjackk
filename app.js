@@ -127,22 +127,22 @@ function decideWinner() {
     const c = calculate_score(computer_cards);
 
     if (u === c) {    
-        hideDealerCard = false;return endGame("Draw 🙃");}
+        hideDealerCard = false;return endGame("Draw");}
     if (c === 0) {    
-        hideDealerCard = false;return endGame("You lose 😱 (Dealer Blackjack)", -currentBet);}
+        hideDealerCard = false;return endGame("You lose (Dealer Blackjack)", -currentBet);}
     if (u === 0) {    
-        hideDealerCard = false;return endGame("You win 😎 (Blackjack!)", currentBet);}
+        hideDealerCard = false;return endGame("You win (Blackjack!)", currentBet);}
     if (u > 21){    
         hideDealerCard = false;
         
-         return endGame("You lose 😭 (Bust)", -currentBet);
+         return endGame("You lose (Bust)", -currentBet);
     }
     if (c > 21) {    
-        hideDealerCard = false;return endGame("You win 😁 (Dealer bust)", currentBet);}
+        hideDealerCard = false;return endGame("You win (Dealer bust)", currentBet);}
     if (u > c) {    
-        hideDealerCard = false;return endGame("You win 😃", currentBet);}
+        hideDealerCard = false;return endGame("You win", currentBet);}
     updateUI()
-    endGame("You lose 😞", -currentBet);
+    endGame("You lose", -currentBet);
 }
 
 // ================= EVENTS =================
@@ -172,11 +172,11 @@ document.body.style.overflow = "unset"; // body
     updateUI();
 
     if (calculate_score(user_cards) === 0)
-        endGame("You win 😎 (Blackjack!)", currentBet);
+        endGame("You win (Blackjack!)", currentBet);
     else if (calculate_score(computer_cards) === 0) {
     hideDealerCard = false;
     updateUI(); // ✅ reveal dealer blackjack
-    endGame("Computer wins 😱 (Blackjack)", -currentBet);
+    endGame("Computer wins (Blackjack)", -currentBet);
 }
 };
 
@@ -190,7 +190,7 @@ hit.onclick = () => {
    
 
     updateUI(); // ✅ REVEAL DEALER CARD
-    endGame("You lose 😭 (Bust)", -currentBet);
+    endGame("You lose (Bust)", -currentBet);
 }
 };
 
