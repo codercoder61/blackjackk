@@ -5,7 +5,9 @@
 }
 
 
-
+td,th{
+    padding:5px;
+}
 
 #main-wrapper{
     width: 100%;
