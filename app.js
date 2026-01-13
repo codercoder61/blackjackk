@@ -256,19 +256,25 @@ resetBtn.onclick = () => {
 };
 
 fetch("https://sharemydocs.lovestoblog.com/get_scores.php")
-    .then(res => res.json())
-    .then(data => {
-        const table = document.getElementById("scoreTable");
-        table.innerHTML = "";
+  .then(res => res.json())
+  .then(data => {
+      const table = document.getElementById("scoreTable");
+      table.innerHTML = "";
 
-        data.forEach((row) => {
-            table.innerHTML += `
-                <tr>
-                    <td>${row.player_name}</td>
-                    <td>${row.score}</td>
-                </tr>
-            `;
-        });
-    });
+      if (data.length > 0) { // check if array has elements
+          data.forEach((row) => {
+              table.innerHTML += `
+                  <tr>
+                      <td>${row.player_name}</td>
+                      <td>${row.score}</td>
+                  </tr>
+              `;
+          });
+      } else {
+          table.innerHTML = `<tr><td colspan="2">No scores yet</td></tr>`;
+      }
+  })
+  .catch(err => console.error(err));
+
 
 
