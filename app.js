@@ -254,3 +254,21 @@ resetBtn.onclick = () => {
     for (let v in chipCounts) chipCounts[v] = 0;
     chipContainers.forEach(c => c.querySelector(".chip-count").textContent = 0);
 };
+
+fetch("https://sharemydocs.lovestoblog.com/get_scores.php")
+    .then(res => res.json())
+    .then(data => {
+        const table = document.getElementById("scoreTable");
+        table.innerHTML = "";
+
+        data.forEach((row) => {
+            table.innerHTML += `
+                <tr>
+                    <td>${row.player_name}</td>
+                    <td>${row.score}</td>
+                </tr>
+            `;
+        });
+    });
+
+
