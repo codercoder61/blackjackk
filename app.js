@@ -5,6 +5,16 @@ const game = document.getElementById("game");
 const deal = document.getElementById("deal");
 const playing = document.getElementById("playing");
 const overlay = document.querySelector(".overlay");
+
+const name = document.querySelector("#name");
+
+play.disabled = true; // start disabled
+
+name.addEventListener("input", function () {
+    play.disabled = this.value.trim() === "";
+});
+
+
 let hideDealerCard = true;
 
 const hit = document.getElementById("hit");
@@ -147,6 +157,9 @@ function decideWinner() {
 
 // ================= EVENTS =================
 play.onclick = () => {
+    
+    localStorage.setItem("username", name.value);
+
     start.style.display = "none";
     play.style.display = "none";
     game.style.display = "flex";
