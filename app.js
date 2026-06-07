@@ -6,7 +6,6 @@ const deal = document.getElementById("deal");
 const playing = document.getElementById("playing");
 const overlay = document.querySelector(".overlay");
 
-const name = document.querySelector("#name");
 
 play.disabled = true; // start disabled
 
@@ -156,7 +155,6 @@ function decideWinner() {
 // ================= EVENTS =================
 play.onclick = () => {
     
-    localStorage.setItem("username", name.value);
 
     start.style.display = "none";
     play.style.display = "none";
