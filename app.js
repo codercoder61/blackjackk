@@ -10,9 +10,7 @@ const name = document.querySelector("#name");
 
 play.disabled = true; // start disabled
 
-name.addEventListener("input", function () {
-    play.disabled = this.value.trim() === "";
-});
+
 
 
 let hideDealerCard = true;
